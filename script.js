@@ -20,9 +20,12 @@ function btnEncriptar() {
         mensajeDesencriptado.value = textoEncriptado;
     } else {
         console.log("Escriba algo");
-        imagen.style.display = "block";
+        imagen.style.display = "flex";
         areaEncriptar.style.display = "none";
     }
+    document.getElementById("area").value = "";
+    document.getElementById("area").focus();
+
 
 }
 
@@ -54,9 +57,11 @@ function btnDesencriptar() {
         mensajeDesencriptado.value = textoDesencriptado;
     } else {
         console.log("Escriba algo");
-        imagen.style.display = "block";
+        imagen.style.display = "flex";
         areaEncriptar.style.display = "none";
     }
+    document.getElementById("area").value = "";
+    document.getElementById("area").focus();
 
 }
 
@@ -77,7 +82,7 @@ function desencriptar(textoDesencriptar) {
 }
 
 function btnCopiar() {
-    console.log("Copiando...");
+    // console.log("Copiando...");
     let resultado = document.getElementById("desencriptado").value;
 
     let tempTextArea = document.createElement("textarea");
@@ -87,5 +92,17 @@ function btnCopiar() {
     tempTextArea.select();
     document.execCommand("copy");
     document.body.removeChild(tempTextArea);
-    alert("Se ha copiado el texto al portapaeles...")
+
+    document.getElementById("botonCopiar").disabled = true;
+    document.getElementById("botonCopiar").style.opacity = "0.8";
+
+    document.getElementById("botonCopiar").innerHTML = "Se copió el texto";
+
+    setTimeout(function () {
+        document.getElementById("botonCopiar").disabled = false;
+        document.getElementById("botonCopiar").style.opacity = "1";
+
+        document.getElementById("botonCopiar").innerHTML = "Copiar";
+    }, 3000);
+    // alert("Se ha copiado el texto al portapapeles...");
 }
