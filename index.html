@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="shortcut icon" href="./imagenes/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="./imagenes/Logo.png" alt="Logo de alura">
+
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <section class="panel-izquierdo">
+                <textarea class="text-area" name="area" id="area" cols="30" rows="10"
+                    placeholder="Ingresa el texto aquí"></textarea>
+
+                <div class="informacion">
+                    <img class="informacion-img" src="./imagenes/bi_exclamation-circle-fill.png" alt="" srcset="">
+
+                    <h6 class="informacion-msg">Solo letras minúsculas y sin acento</h6>
+                </div>
+                <div class="centrar">
+
+                    <div class="botones">
+                        <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="panel-derecho">
+                <div class="mensaje" id="">
+
+                    <img class="img-muneco" src="./imagenes/Muñeco.png" alt="">
+
+                    <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                    <p class="texto-dos">Ingrese el texto que deseas encriptar o desencriptar</p>
+                </div>
+                <div class="mensajeOculto" id="" style="display: none;">
+                    <div class="mensaje2">
+                        <div class="resultado">
+                            <textarea class="texto-desencriptado" name="" id="desencriptado" readonly disabled
+                                rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</textarea>
+
+                        </div>
+                        <div class="boton-copiar">
+                            <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div class="pie">
+
+            <p class="footer-texto"> &copy;2024 - Encriptador de texto desarrollado por: <span class="nombre">Santiago
+                    Coral </span>💻😁</p>
+
+
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
